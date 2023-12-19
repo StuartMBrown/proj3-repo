@@ -20,7 +20,7 @@ Heatmap like
 - layer # of endangered
 - layer # of nonesstential
 
-View #2
+View #2 - Sania and Kelsey would feel comfortable doing this if ok
 Dashboard (web scrap - create for loop)
 - drop down for state
 - drop down for species (include common name) 
