@@ -37,9 +37,10 @@ View #3
 - [x] create one-page proposal (12/18) 
 - [x] discuss our charts and evaluate data if it will allow for those charts (12/18) 
 - [x] sketch webpage and determine how parts are related (12/18)
-- [ ] A database is used to house data (SQL, MongoDB, SQLite, etc.) - (12/19)
-- [ ] Merge CSVs and turn into JSON (12/19)
-- [ ] clean data and then put it into database (12/19)
+- [x] A database is used to house data (SQL, MongoDB, SQLite, etc.) - (12/19)
+- [ ] Merge CSVs and turn into JSON (12/21)
+- [ ] Create FLASK application (12/21)
+- [x] clean data and then put it into database (12/19)
 - [ ] write queries that will pull data from the db that matches what is needed for the plot and create routes to send data to javascript (12/19)
 - [ ] Plot #1 (12/21) - Location plot 
 - [ ] Plot #2 (12/21) - Dashboard 
