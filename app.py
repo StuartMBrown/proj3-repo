@@ -32,7 +32,7 @@ app = Flask(__name__)
 
 # Function to retrieve data from SQLite database
 def get_data_from_database():
-    connection = sqlite3.connect('database.sql.db')  # Replace 'your_database.db' with your actual SQLite database file
+    connection = sqlite3.connect('database.sql.db') 
     cursor = connection.cursor()
 
     # Example query: Select data from a table
