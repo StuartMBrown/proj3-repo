@@ -15,7 +15,8 @@ Focus on the great lakes endangered species: Minnesota, Wisconsin, Illinois, Ind
 View #1 - Maryam, Jian, Stuart
 Location chart of all the threatened, endangered species, nonesstential
 Leaflet map - brings up page with summary (Erin will help with GEOJSON - edit out all states not in project)
-Heatmap like 
+
+Chloropleth map for each layer - scale is total # of species for each category
 - layer # of threated 
 - layer # of endangered
 - layer # of nonesstential
@@ -45,6 +46,7 @@ View #3 - Val
 - [ ] Plot #1 (12/21) - Location plot 
 - [ ] Plot #2 (12/21) - Dashboard 
 - [ ] Plot #3 (12/21) - Summary 
+  - [ ] pop up with top 3 depending on layer (scrap if too messy)
 - [ ] Visualisations created from user-selected filtered data (12/21) 
 - [ ] A Python or JavaScript library not shown in class is used in the project (1/2)
 - [ ] create a webpage that will hold graphics and create a flask route that renders/loads the webpage (1/2)
