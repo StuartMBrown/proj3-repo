@@ -7,20 +7,13 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 import numpy as np
-import sqlite3
-
-### converting JSON file to sqlite db
-
-# create a connection to the SQlite database
-conn = sqlite3.connect('example.db')
-
-
+from config import username, password, database
 
 #################################################
 # Database Setup
 #################################################
 
-engine = create_engine ("sqlite:///database.sql")
+engine = create_engine(f"postgresql+psycopg2://{username}:{password}@localhost:5432/{database}")
 
 #reflect an exisiting database into a new model
 Base = automap_base()
@@ -39,10 +32,10 @@ app = Flask(__name__)
 
 # Function to retrieve data from SQLite database
 def get_data_from_database():
-    connection = sqlite3.connect('database.sql.db')  # Replace 'your_database.db' with your actual SQLite database file
+    connection = sqlite3.connect('database.sql.db') 
     cursor = connection.cursor()
 
-    # Example query: Select data from a table
+    # Select data from a table
     cursor.execute('SELECT scientific_name, common_name FROM combined_data.json')
     data = cursor.fetchall()
 
@@ -54,6 +47,11 @@ def get_data_from_database():
 def welcome():
     return render_template("index.html")
 
+@app.route("/view2")
+def view2():
+    return render_template("view2.html")
+
+
 @app.route("/api/v1.0/??")
 def combine_data():
     # Some data processing logic here
@@ -61,14 +59,6 @@ def combine_data():
     data2 = "World"
     combined_data = f"{data1}, {data2}"
     return combined_data
-
-@app.route('/')
-def index():
-    # Get combined data
-    data = combine_data()
-
-    # Render the HTML template with the combined data
-    return render_template('index.html', combined_data=data)
 
 if __name__ == '__main__':
     app.run(debug=True)

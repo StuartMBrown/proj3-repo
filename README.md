@@ -20,7 +20,7 @@ Heatmap like
 - layer # of endangered
 - layer # of nonesstential
 
-View #2 - Sania and Kelsey would feel comfortable doing this if ok
+View #2 - Sania and Kelsey 
 Dashboard (web scrap - create for loop)
 - drop down for state
 - drop down for species (include common name) 
@@ -29,8 +29,8 @@ Dashboard (web scrap - create for loop)
 - image
 - blurb about animal 
 
-View #3
-- Summary of the species distrubution 
+View #3 - Val 
+- Sunchart 
 
 ## Project Plan Idea (will be deleted later)
 - [x] Find data (contains 100+) 
