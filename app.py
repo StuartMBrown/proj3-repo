@@ -7,6 +7,13 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 import numpy as np
+import sqlite3
+
+### converting JSON file to sqlite db
+
+# create a connection to the SQlite database
+conn = sqlite3.connect('example.db')
+
 
 
 #################################################
