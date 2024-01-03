@@ -12,7 +12,7 @@ An experimental population is a population of an endangered or threatened specie
 ## Details for Team to Refer to (will be deleted later):
 Focus on the great lakes endangered species: Minnesota, Wisconsin, Illinois, Indiana, Ohio, Michigan, Pennsylvania (Region 1) and New York (Region 1)
 
-View #1
+View #1 - Maryam, Jian, Stuart
 Location chart of all the threatened, endangered species, nonesstential
 Leaflet map - brings up page with summary (Erin will help with GEOJSON - edit out all states not in project)
 Heatmap like 
@@ -38,8 +38,8 @@ View #3 - Val
 - [x] discuss our charts and evaluate data if it will allow for those charts (12/18) 
 - [x] sketch webpage and determine how parts are related (12/18)
 - [x] A database is used to house data (SQL, MongoDB, SQLite, etc.) - (12/19)
-- [ ] Merge CSVs and turn into JSON (12/21)
-- [ ] Create FLASK application (12/21)
+- [x] Merge CSVs and turn into JSON (12/21)
+- [x] Create FLASK application (12/21)
 - [x] clean data and then put it into database (12/19)
 - [ ] write queries that will pull data from the db that matches what is needed for the plot and create routes to send data to javascript (12/19)
 - [ ] Plot #1 (12/21) - Location plot 
