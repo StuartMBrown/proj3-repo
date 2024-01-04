@@ -35,7 +35,7 @@ def welcome():
     return render_template("index.html")
 
 @app.route("/view1")
-def view2():
+def view1():
     return render_template("view1.html")
 
 @app.route("/view2")
@@ -43,7 +43,7 @@ def view2():
     return render_template("view2.html")
 
 @app.route("/view3")
-def view2():
+def view3():
     return render_template("view3.html")
 
 if __name__ == '__main__':
