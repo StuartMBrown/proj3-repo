@@ -100,10 +100,9 @@ function getAnimalName(state, category) {
 
 // Testing things - kelsey 
 
-// In python file I will total the number of estinct, threatened and other 
-//Potential pie chart? 
+// pie chart
 var data = [{
-    values: [19, 26, 55],
+    values: [117, 81, 13],
     labels: ['Threatened', 'Extinct', 'Experimental/Other'],
     type: 'pie'
    }];
@@ -114,4 +113,6 @@ var data = [{
    };
 
    Plotly.newPlot('myDiv', data, layout);
+
+
    
