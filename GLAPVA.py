@@ -3,14 +3,14 @@ import pandas as pd
 from pathlib import Path
 
 # File to Load (Remember to Change These)
-illinois_data_to_load = Path("proj3-repo/speciesIL.csv")
-indiana_data_to_load = Path("proj3-repo/speciesIN.csv")
-michigan_data_to_load = Path("proj3-repo/speciesMI.csv")
-minnesota_data_to_load = Path("proj3-repo/speciesMN.csv")
-new_york_data_to_load = Path("proj3-repo/speciesNY.csv")
-ohio_data_to_load = Path("proj3-repo/speciesOH.csv")
-pennsylvania_data_to_load = Path("proj3-repo/speciesPA.csv")
-wisconsin_data_to_load = Path("proj3-repo/speciesWI.csv")
+illinois_data_to_load = Path("speciesIL.csv")
+indiana_data_to_load = Path("speciesIN.csv")
+michigan_data_to_load = Path("speciesMI.csv")
+minnesota_data_to_load = Path("speciesMN.csv")
+new_york_data_to_load = Path("speciesNY.csv")
+ohio_data_to_load = Path("speciesOH.csv")
+pennsylvania_data_to_load = Path("speciesPA.csv")
+wisconsin_data_to_load = Path("speciesWI.csv")
 
 
 # Read School and Student Data File and store into Pandas DataFrames
@@ -23,6 +23,15 @@ ohio_data = pd.read_csv(ohio_data_to_load)
 pennsylvania_data = pd.read_csv(pennsylvania_data_to_load)
 wisconsin_data = pd.read_csv(wisconsin_data_to_load)
 
+# insert state column for each csv
+illinois_data['state'] = 'IL'
+indiana_data['state'] = 'IN'
+michigan_data['state'] = 'MI'
+minnesota_data['state'] = 'MN'
+new_york_data['state'] = 'NY'
+ohio_data['state'] = 'OH'
+pennsylvania_data['state'] = 'PA'
+wisconsin_data['state'] = 'WI'
 
 # Combine all DataFrames into one
 all_data = pd.concat([
@@ -41,3 +50,7 @@ json_output_file = Path("combined_data.json")
 all_data.to_json(json_output_file, orient="records")
 
 print(f"Combined data has been saved to {json_output_file}")
+
+# convert the combined dataframe to csv and save it to a file
+# export to replace current CSV
+all_data.to_csv('all_data.csv', encoding='utf-8', index=False, header=True)

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Species Dashboard</title>
+    <link rel="stylesheet" href="./static/css/view2.css">
+</head>
+<body>
+
+    <div id="dashboard">
+        <label for="stateDropdown">Select State:</label>
+        <select id="stateDropdown"></select>
+
+        <label for="speciesDropdown">Select Species:</label>
+        <select id="speciesDropdown"></select>
+
+        <button onclick="fetchData()">Fetch Data</button>
+
+        <div id="gaugePlot"></div>
+
+        <div id="whereListed"></div>
+
+        <img id="animalImage" src="" alt="Animal Image">
+
+        <div id="animalBlurb"></div>
+    </div>
+
+    <script src="./static/js/view1.js"></script>
+</body>
+</html>
+

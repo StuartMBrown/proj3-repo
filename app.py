@@ -8,6 +8,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 import numpy as np
 from config import username, password, database
+import psycopg2
 
 #################################################
 # Database Setup
@@ -35,7 +36,7 @@ def welcome():
     return render_template("index.html")
 
 @app.route("/view1")
-def view2():
+def view1():
     return render_template("view1.html")
 
 @app.route("/view2")
@@ -43,11 +44,19 @@ def view2():
     return render_template("view2.html")
 
 @app.route("/view3")
-def view2():
+def view3():
     return render_template("view3.html")
+
+@app.route("/api/v1.0/boundaries")
+def boundary():
+    with open("./static/data/combined_data.json") as file:
+        json_decoded = json.load(file)
+
+    return json_decoded
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
 
 
 
