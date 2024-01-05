@@ -96,3 +96,22 @@ function getAnimalName(state, category) {
   // Example: return `${state} ${category} Animal`;
   return "Animal Name";  // Replace with actual logic
 }
+
+
+// Testing things - kelsey 
+
+// In python file I will total the number of estinct, threatened and other 
+//Potential pie chart? 
+var data = [{
+    values: [19, 26, 55],
+    labels: ['Threatened', 'Extinct', 'Experimental/Other'],
+    type: 'pie'
+   }];
+
+   var layout = {
+    height: 400,
+    width: 500
+   };
+
+   Plotly.newPlot('myDiv', data, layout);
+   
