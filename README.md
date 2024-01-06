@@ -10,7 +10,7 @@ Technologies used: Python, HTML, Javascript, PostgresSQL, CSS, Jupyter Notebooks
 Contributors: 
 
 ## Table of Contents
-[Important Definitions](link)
+[Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)
 
 [Map View](link)
 
@@ -23,6 +23,15 @@ Contributors:
 * A “threatened species” is one that is likely to become endangered in the foreseeable future throughout all or a significant portion of its range.
 * An “endangered species” is one that is in danger of extinction throughout all or a significant portion of its range.
 * An experimental population is a population of an endangered or threatened species that is released into the wild outside of the current range of the species with the aim of contributing to the conservation of the species.
+
+## Map View 
+
+
+## Dashboard of Species
+
+
+## Sun Burst
+
 
 
 
