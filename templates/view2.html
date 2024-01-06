@@ -1,54 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Species Dashboard</title>
+    <link rel="stylesheet" href="./static/css/view2.css">
+</head>
+<body>
+    <div class="col-md-12 jumbotron text-center">
+        <h1>Endangered Species Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+
+    <div id="dashboard">
+        <label for="stateDropdown">Select State:</label>
+        <select id="stateDropdown"></select>
+
+        <label for="speciesDropdown">Select Species:</label>
+        <select id="speciesDropdown"></select>
+
+        <button onclick="fetchData()">Fetch Data</button>
+
+        <div id="gaugePlot"></div>
+
+        <div id="whereListed"></div>
+
+        <img id="animalImage" src="" alt="Animal Image">
+
+        <div id="animalBlurb"></div>
+    </div>
+
+    <script src="./static/js/view2.js"></script>
+</body>
+</html> -->
+
+
+
+----
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Dashboard</title>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="view2.js" defer></script>
-  <style>
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Species Dashboard</title>
+    <link rel="stylesheet" href="./static/css/view2.css">
 </head>
 <body>
+    <div class="col-md-12 jumbotron text-center">
+        <h1>Endangered Species Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+    </div>
 
-<h1>Interactive Dashboard</h1>
+    <div id="dashboard">
+        <label for="stateDropdown">Select State:</label>
+        <select id="stateDropdown">
+            <option value="Minnesota">Minnesota</option>
+            <option value="New York">New York</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Wisconsin">Wisconsin</option>
+        </select>
 
-<!-- Dropdown for 8 Great Lake States -->
-<label for="greatLakeStates">Select a Great Lake State:</label>
-<select id="greatLakeStates" onchange="updateDashboard()">
-  <option value="Michigan">Michigan</option>
-  <option value="Wisconsin">Wisconsin</option>
-  <option value="Illinois">Illinois</option>
-  <option value="New York">New York</option>
-  <option value="Ohio">Ohio</option>
-  <option value="Pennslyvania">Pennslyvania</option>
-  <option value="Indiana">Indiana</option>
-  <!-- Add other Great Lake States as needed -->
-</select>
+        <label for="speciesDropdown">Select Species Type:</label>
+        <select id="speciesDropdown">
+            <option value="lion">Lion</option>
+            <option value="tiger">Tiger</option>
+            <option value="elephant">Elephant</option>
+            <option value="giraffe">Giraffe</option>
+            <!-- Add more species types as needed -->
+        </select>
 
-<!-- Dropdown for Categories of Species -->
-<label for="speciesCategories">Select a Species Category:</label>
-<select id="speciesCategories" onchange="updateDashboard()">
-  <option value="Endangered">Endangered</option>
-  <option value="Threatened">Threatened</option>
-  <option value="Experimental Population">Experimental Population</option>
-  <!-- Add other species categories as needed -->
-</select>
+        <button onclick="fetchData()">Fetch Data</button>
 
-<!-- Image Container -->
-<div id="imageContainer"></div>
+        <div id="gaugePlot"></div>
 
-<!-- Gauge Plot Container -->
-<div id="gaugeContainer"></div>
+        <div id="whereListed"></div>
 
-<!-- Animal Name Container -->
-<div id="animalNameContainer"></div>
+        <img id="speciesImage" src="" alt="Species Image">
 
-<script src="view2.js" defer></script>
+        <div id="speciesBlurb"></div>
+    </div>
 
+    <div id="popup">
+        <div id="popupContent">
+            <button onclick="closePopup()">Close</button>
+            <div id="popupGaugePlot"></div>
+            <div id="popupLocation"></div>
+            <img id="popupAnimalImage" src="" alt="Animal Image">
+            <div id="popupAnimalDescription"></div>
+        </div>
+    </div>
+
+    <script src="./static/js/view2.js"></script>
 </body>
 </html>
+
