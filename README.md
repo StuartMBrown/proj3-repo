@@ -7,9 +7,9 @@ Technologies used: Python, HTML, Javascript, PostgresSQL, CSS, Jupyter Notebooks
 
 Contributors: Jian Qiang Liu, Kelsey Sniatynsky, Maryam Shaaban, Sania Sufi, Stuart Brown, Valeria Briones
 
-## Table of Contents
-[Data Source](https://github.com/StuartMBrown/proj3-repo#data-source)
+Environmental Conservation Online System: https://ecos.fws.gov/ecp/report/species-listings-by-state-totals?statusCategory=Listed
 
+## Table of Contents
 [Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)
 
 [Pull and Clean Data](https://github.com/StuartMBrown/proj3-repo#1-pull-and-clean-data)
@@ -23,10 +23,6 @@ Contributors: Jian Qiang Liu, Kelsey Sniatynsky, Maryam Shaaban, Sania Sufi, Stu
 [Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)
 
 [Conclusion](https://github.com/StuartMBrown/proj3-repo#6-conclusion)
-
-## Data Source 
-
-Environmental Conservation Online System: https://ecos.fws.gov/ecp/report/species-listings-by-state-totals?statusCategory=Listed
 
 ## Important Definitions 
 * A "non-essential species" based of the best available information,is the experimental population not essential for the continued existence of the species.
