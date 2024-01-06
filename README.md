@@ -1,8 +1,6 @@
 MAKING CHANGES TO REPO
 
 ## Project overview - Visualization Track 
-Dataset:(https://ecos.fws.gov/ecp/report/species-listings-by-state-totals?statusCategory=Listed)
-
 The Great Lakes Endangered Species Project focuses on raising awareness about the species in the Great Lakes region, specifically in states such as Minnesota, Wisconsin, Illinois, Indiana, Ohio, Michigan, Pennsylvania, and New York. The project employs three main views to convey crucial information. View #1 presents a location chart showcasing the distribution of threatened, endangered, and nonessential species, using different layers to distinguish each category. View #2 offers a dynamic dashboard with dropdown options for selecting a specific state and species (including common names). This view includes a pop-up gauge plot displaying the levels of threatened, endangered, and nonessential species, along with additional information such as the listing location, images, and brief descriptions of the animals. View #3 serves as a comprehensive summary of species distribution in the Great Lakes region. By providing a comprehensive visual representation and interactive features, the project aims to shed light on the current status of these animals and promote awareness for their conservation in the Great Lakes region.
 
 Technologies used: Python, HTML, Javascript, PostgresSQL, CSS, Jupyter Notebooks and various Python libraries 
@@ -10,14 +8,14 @@ Technologies used: Python, HTML, Javascript, PostgresSQL, CSS, Jupyter Notebooks
 Contributors: Jian Qiang Liu, Kelsey Sniatynsky, Maryam Shaaban, Sania Sufi, Stuart Brown, Valeria Briones
 
 ## Table of Contents
-[Data Source]()
-[Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)
-[Pull and Clean Data]()
-[Postgres Databse]()
-[Map View](https://github.com/StuartMBrown/proj3-repo#map-view)
-[Dashboard of Species](https://github.com/StuartMBrown/proj3-repo#dashboard-of-species)
-[Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)
-[Conclusion]()
+[Data Source](https://github.com/StuartMBrown/proj3-repo#data-source)/n
+[Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)/n
+[Pull and Clean Data](https://github.com/StuartMBrown/proj3-repo#1-pull-and-clean-data)/n
+[Postgres Databse](https://github.com/StuartMBrown/proj3-repo#2-postgres-database)/n
+[Map View](https://github.com/StuartMBrown/proj3-repo#map-view)/n
+[Dashboard of Species](https://github.com/StuartMBrown/proj3-repo#dashboard-of-species)/n
+[Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)/n
+[Conclusion](https://github.com/StuartMBrown/proj3-repo#6-conclusion)
 
 ## Data Source 
 
