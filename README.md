@@ -11,12 +11,12 @@ Contributors:
 
 ## Table of Contents
 [Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)
-
-[Map View](link)
-
-[Dashboard of Species](link)
-
-[Sun Burst](link)
+[Pull and Clean Data]()
+[Postgres Databse]()
+[Map View](https://github.com/StuartMBrown/proj3-repo#map-view)
+[Dashboard of Species](https://github.com/StuartMBrown/proj3-repo#dashboard-of-species)
+[Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)
+[Conclusion]()
 
 ## Important Definitions 
 * A "non-essential species" based of the best available information,is the experimental population not essential for the continued existence of the species.
@@ -24,14 +24,17 @@ Contributors:
 * An “endangered species” is one that is in danger of extinction throughout all or a significant portion of its range.
 * An experimental population is a population of an endangered or threatened species that is released into the wild outside of the current range of the species with the aim of contributing to the conservation of the species.
 
-## Map View 
+## 1. Pull and Clean Data 
 
+## 2. Postgres Database
 
-## Dashboard of Species
+## 3. Map View 
 
+## 4. Dashboard of Species
 
-## Sun Burst
+## 5. Sun Burst
 
+## 6. Conclusion 
 
 
 
