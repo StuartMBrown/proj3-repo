@@ -8,13 +8,20 @@ Technologies used: Python, HTML, Javascript, PostgresSQL, CSS, Jupyter Notebooks
 Contributors: Jian Qiang Liu, Kelsey Sniatynsky, Maryam Shaaban, Sania Sufi, Stuart Brown, Valeria Briones
 
 ## Table of Contents
-[Data Source](https://github.com/StuartMBrown/proj3-repo#data-source)/n
-[Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)/n
-[Pull and Clean Data](https://github.com/StuartMBrown/proj3-repo#1-pull-and-clean-data)/n
-[Postgres Databse](https://github.com/StuartMBrown/proj3-repo#2-postgres-database)/n
-[Map View](https://github.com/StuartMBrown/proj3-repo#map-view)/n
-[Dashboard of Species](https://github.com/StuartMBrown/proj3-repo#dashboard-of-species)/n
-[Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)/n
+[Data Source](https://github.com/StuartMBrown/proj3-repo#data-source)
+
+[Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)
+
+[Pull and Clean Data](https://github.com/StuartMBrown/proj3-repo#1-pull-and-clean-data)
+
+[Postgres Databse](https://github.com/StuartMBrown/proj3-repo#2-postgres-database)
+
+[Map View](https://github.com/StuartMBrown/proj3-repo#map-view)
+
+[Dashboard of Species](https://github.com/StuartMBrown/proj3-repo#dashboard-of-species)
+
+[Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)
+
 [Conclusion](https://github.com/StuartMBrown/proj3-repo#6-conclusion)
 
 ## Data Source 
