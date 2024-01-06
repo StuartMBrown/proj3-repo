@@ -7,7 +7,7 @@ The Great Lakes Endangered Species Project focuses on raising awareness about th
 
 Technologies used: Python, HTML, Javascript, PostgresSQL, CSS, Jupyter Notebooks and various Python libraries 
 
-Contributors: 
+Contributors: Jian Qiang Liu, Kelsey Sniatynsky, Maryam Shaaban, Sania Sufi, Stuart Brown, Valeria Briones
 
 ## Table of Contents
 [Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)
