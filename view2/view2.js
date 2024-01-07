@@ -14,7 +14,7 @@ function closePopup() {
 
 // Example function to fetch data and open the pop-up
 function fetchData() {
-    // Perform your data fetching here (replace this with actual data)
+    // Perform  data fetching here 
     const data = {https://ecos.fws.gov/ecp/report/species-listings-by-state
         gaugePlot: '...gauge plot data...',
         location: '...listing location...',
