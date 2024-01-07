@@ -1,54 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Dashboard</title>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="view2.js" defer></script>
-  <style>
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Species Dashboard</title>
+    <!-- Include D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
+    <!-- HTML content goes here -->
+    <div id="selDataset"></div>
+    <div id="description"></div>
+    <img id="speciesImage" alt="Species Image" style="max-width: 100%;" />
+    <div id="myDiv"></div>
 
-<h1>Interactive Dashboard</h1>
+    <!-- Include external JavaScript file -->
+    <script>
+        d3.json('/static/data/output.json').then(data => {
+            if (!data) {
+                console.error("Error loading data");
+                return;
+            }
 
-<!-- Dropdown for 8 Great Lake States -->
-<label for="greatLakeStates">Select a Great Lake State:</label>
-<select id="greatLakeStates" onchange="updateDashboard()">
-  <option value="Michigan">Michigan</option>
-  <option value="Wisconsin">Wisconsin</option>
-  <option value="Illinois">Illinois</option>
-  <option value="New York">New York</option>
-  <option value="Ohio">Ohio</option>
-  <option value="Pennslyvania">Pennslyvania</option>
-  <option value="Indiana">Indiana</option>
-  <!-- Add other Great Lake States as needed -->
-</select>
+            var speciesImageElement = d3.select("#speciesImage");
+            var pieChart; // Assuming you have a variable to store the pie chart
 
-<!-- Dropdown for Categories of Species -->
-<label for="speciesCategories">Select a Species Category:</label>
-<select id="speciesCategories" onchange="updateDashboard()">
-  <option value="Endangered">Endangered</option>
-  <option value="Threatened">Threatened</option>
-  <option value="Experimental Population">Experimental Population</option>
-  <!-- Add other species categories as needed -->
-</select>
+            // Add the JSON data to the dropdown menu.
+            var menu = d3.select("#selDataset");
+            data.forEach(sample => {
+                menu.append("option").text(sample.name).property("value", sample.name);
+            });
 
-<!-- Image Container -->
-<div id="imageContainer"></div>
+            // Initial update for all plots and metadata
+            updatePlotsAndMetadata(data[0].name);
+            updateDescription(data[0].description);
+            updatePieChart(data[0]);
+            updateSpeciesImage(data[0].image_url);
 
-<!-- Gauge Plot Container -->
-<div id="gaugeContainer"></div>
+            // Update all plots and metadata when you change the dropdown selection.
+            menu.on("change", function () {
+                var thisSample = this.value;
+                var selectedSample = data.find(sample => sample.name === thisSample);
 
-<!-- Animal Name Container -->
-<div id="animalNameContainer"></div>
+                if (selectedSample) {
+                    updatePlotsAndMetadata(selectedSample.name);
+                    updateDescription(selectedSample.description);
+                    updatePieChart(selectedSample);
+                    updateSpeciesImage(selectedSample.image_url);
+                } else {
+                    console.error("Selected sample not found in data");
+                }
+            });
 
-<script src="view2.js" defer></script>
+            function updateDescription(description) {
+                var descriptionElement = d3.select("#description");
+                descriptionElement.text(description);
+            }
 
+            // Function to update the species image
+            function updateSpeciesImage(imageUrl) {
+                // Update the src attribute of the image element
+                speciesImageElement.attr("src", imageUrl);
+            }
+
+            // Function to update the pie chart based on the selected sample
+            function updatePieChart(sample) {
+                var pieData = [{
+                    values: [117, 81, 13],
+                    labels: ['Threatened', 'Extinct', 'Experimental/Other'],
+                    type: 'pie'
+                }];
+
+                var layout = {
+                    height: 400,
+                    width: 500
+                };
+
+                // If the pie chart has been initialized, use Plotly.react to update it
+                if (pieChart) {
+                    Plotly.react('myDiv', pieData, layout);
+                } else {
+                    // If it hasn't been initialized, use Plotly.newPlot
+                    pieChart = Plotly.newPlot('myDiv', pieData, layout);
+                }
+            }
+
+            function updatePlotsAndMetadata(name) {
+                fetchData(name).then(result => {
+                    updatePlots(result.plotsData);
+                    updateMetadata(result.metadata);
+                }).catch(error => {
+                    console.error("Error updating plots and metadata:", error);
+                });
+            }
+
+            function fetchData(name) {
+                return new Promise(function (resolve, reject) {
+                    // Simulating an asynchronous operation, replace with your actual data fetching logic
+                    setTimeout(function () {
+                        // Assume you have a JSON structure with plotsData and metadata
+                        var sampleData = data.find(function (sample) {
+                            return sample.name === name;
+                        });
+
+                        if (sampleData) {
+                            // Adjust based on your JSON structure
+                            var plotsData = {
+                                url: sampleData.url,
+                                endangered: sampleData.endangered,
+                                threatened: sampleData.threatened
+                            };
+
+                            var metadata = {
+                                description: sampleData.description,
+                                state: sampleData.state
+                            };
+
+                            // Resolve the promise with the fetched data
+                            resolve({ plotsData: plotsData, metadata: metadata });
+                        } else {
+                            reject("Sample data not found");
+                        }
+                    }, 1000); // Simulating a delay of 1 second (adjust as needed)
+                });
+            }
+
+            // Example function to update plots
+            function updatePlots(plotsData) {
+                // Your implementation to update plots based on the data
+                console.log("Updating plots with data:", plotsData);
+            }
+
+            // Example function to update metadata
+            function updateMetadata(metadata) {
+                // Your implementation to update metadata based on the data
+                console.log("Updating metadata with data:", metadata);
+            }
+
+        }).catch(error => {
+            console.error("Error loading JSON data:", error);
+        });
+    </script>
 </body>
 </html>
+
+
