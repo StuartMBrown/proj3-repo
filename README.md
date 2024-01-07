@@ -39,6 +39,7 @@ We extracted CSV files from the US Fish and Wildlife Services Website. After obt
 ## 4. Dashboard of Species
 
 ## 5. Sun Burst
+<img width="1445" alt="Screenshot 2024-01-07 at 4 49 40 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/d0182567-fc04-4cb9-bab4-80d802d99d03">
 
 ## 6. Conclusion/Future Considerations 
 
