@@ -22,9 +22,8 @@ var layout = {
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
     title: "Species in Illinois"
 };
-Plotly.newPlot('myDiv', data, layout);}
-function init(){sunburstChart1();}
-init();
+Plotly.newPlot('myDiv1', data, layout);}
+
 
 
 
@@ -52,9 +51,8 @@ var layout = {
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
     title: "Species in Indiana"
 };
-Plotly.newPlot('myDiv', data, layout);}
-function init(){sunburstChart2();}
-init();
+Plotly.newPlot('myDiv2', data, layout);}
+
 
 
 
@@ -83,9 +81,8 @@ var layout = {
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
     title: "Species in Michigan"
 };
-Plotly.newPlot('myDiv', data, layout);}
-function init(){sunburstChart3();}
-init();
+Plotly.newPlot('myDiv3', data, layout);}
+
 
 
 
@@ -101,7 +98,7 @@ function sunburstChart4() {var data = [{
     ],
     parents: [
         "",
-        "Minnesota", "Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered",
+        "Minnesota", "Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered",
         "Minnesota", "Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened",
         
     ],
@@ -114,9 +111,8 @@ var layout = {
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
     title: "Species in Minnesota"
 };
-Plotly.newPlot('myDiv', data, layout);}
-function init(){sunburstChart4();}
-init();
+Plotly.newPlot('myDiv4', data, layout);}
+
 
 
 
@@ -131,7 +127,7 @@ function sunburstChart5() {var data = [{
     ],
     parents: [
         "",
-        "New York", "Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered", "Endangered","Endangered",
+        "New York", "Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered", "Endangered","Endangered", "Endangered",
         "New York", "Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened", "Threatened",
         
     ],
@@ -144,9 +140,8 @@ var layout = {
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
     title: "Species in New York"
 };
-Plotly.newPlot('myDiv', data, layout);}
-function init(){sunburstChart5();}
-init();
+Plotly.newPlot('myDiv5', data, layout);}
+
 
 
 
@@ -163,7 +158,7 @@ function sunburstChart6() {var data = [{
     ],
     parents: [
         "",
-        "Ohio", "Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered", "Endangered","Endangered",
+        "Ohio", "Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered","Endangered", "Endangered","Endangered", "Endangered",
         "Ohio", "Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened","Threatened", "Threatened", "Threatened", "Threatened",
         
     ],
@@ -176,9 +171,8 @@ var layout = {
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
     title: "Species in Ohio"
 };
-Plotly.newPlot('myDiv', data, layout);}
-function init(){sunburstChart6();}
-init();
+Plotly.newPlot('myDiv6', data, layout);}
+
 
 
 
@@ -208,9 +202,8 @@ var layout = {
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
     title: "Species in Pennsylvania"
 };
-Plotly.newPlot('myDiv', data, layout);}
-function init(){sunburstChart7();}
-init();
+Plotly.newPlot('myDiv7', data, layout);}
+
 
 
 
@@ -239,6 +232,16 @@ var layout = {
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
     title: "Species in Wisconsin"
 };
-Plotly.newPlot('myDiv', data, layout);}
-function init(){sunburstChart8();}
+Plotly.newPlot('myDiv8', data, layout);}
+function init() {
+    sunburstChart1();
+    sunburstChart2();
+    sunburstChart3();
+    sunburstChart4();
+    sunburstChart5();
+    sunburstChart6();
+    sunburstChart7();
+    sunburstChart8();
+
+}
 init();
