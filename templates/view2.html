@@ -6,9 +6,10 @@
     <title>Species Dashboard</title>
     <!-- Include D3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-
     <!-- HTML content goes here -->
     <div id="selDataset"></div>
     <div id="description"></div>
@@ -16,6 +17,133 @@
     <div id="myDiv"></div>
 
     <!-- Include external JavaScript file -->
-    <script src="view2.js"></script>
+    <script>
+        d3.json('/static/data/output.json').then(data => {
+            if (!data) {
+                console.error("Error loading data");
+                return;
+            }
+
+            var speciesImageElement = d3.select("#speciesImage");
+            var pieChart; // Assuming you have a variable to store the pie chart
+
+            // Add the JSON data to the dropdown menu.
+            var menu = d3.select("#selDataset");
+            data.forEach(sample => {
+                menu.append("option").text(sample.name).property("value", sample.name);
+            });
+
+            // Initial update for all plots and metadata
+            updatePlotsAndMetadata(data[0].name);
+            updateDescription(data[0].description);
+            updatePieChart(data[0]);
+            updateSpeciesImage(data[0].image_url);
+
+            // Update all plots and metadata when you change the dropdown selection.
+            menu.on("change", function () {
+                var thisSample = this.value;
+                var selectedSample = data.find(sample => sample.name === thisSample);
+
+                if (selectedSample) {
+                    updatePlotsAndMetadata(selectedSample.name);
+                    updateDescription(selectedSample.description);
+                    updatePieChart(selectedSample);
+                    updateSpeciesImage(selectedSample.image_url);
+                } else {
+                    console.error("Selected sample not found in data");
+                }
+            });
+
+            function updateDescription(description) {
+                var descriptionElement = d3.select("#description");
+                descriptionElement.text(description);
+            }
+
+            // Function to update the species image
+            function updateSpeciesImage(imageUrl) {
+                // Update the src attribute of the image element
+                speciesImageElement.attr("src", imageUrl);
+            }
+
+            // Function to update the pie chart based on the selected sample
+            function updatePieChart(sample) {
+                var pieData = [{
+                    values: [117, 81, 13],
+                    labels: ['Threatened', 'Extinct', 'Experimental/Other'],
+                    type: 'pie'
+                }];
+
+                var layout = {
+                    height: 400,
+                    width: 500
+                };
+
+                // If the pie chart has been initialized, use Plotly.react to update it
+                if (pieChart) {
+                    Plotly.react('myDiv', pieData, layout);
+                } else {
+                    // If it hasn't been initialized, use Plotly.newPlot
+                    pieChart = Plotly.newPlot('myDiv', pieData, layout);
+                }
+            }
+
+            function updatePlotsAndMetadata(name) {
+                fetchData(name).then(result => {
+                    updatePlots(result.plotsData);
+                    updateMetadata(result.metadata);
+                }).catch(error => {
+                    console.error("Error updating plots and metadata:", error);
+                });
+            }
+
+            function fetchData(name) {
+                return new Promise(function (resolve, reject) {
+                    // Simulating an asynchronous operation, replace with your actual data fetching logic
+                    setTimeout(function () {
+                        // Assume you have a JSON structure with plotsData and metadata
+                        var sampleData = data.find(function (sample) {
+                            return sample.name === name;
+                        });
+
+                        if (sampleData) {
+                            // Adjust based on your JSON structure
+                            var plotsData = {
+                                url: sampleData.url,
+                                endangered: sampleData.endangered,
+                                threatened: sampleData.threatened
+                            };
+
+                            var metadata = {
+                                description: sampleData.description,
+                                state: sampleData.state
+                            };
+
+                            // Resolve the promise with the fetched data
+                            resolve({ plotsData: plotsData, metadata: metadata });
+                        } else {
+                            reject("Sample data not found");
+                        }
+                    }, 1000); // Simulating a delay of 1 second (adjust as needed)
+                });
+            }
+
+            // Example function to update plots
+            function updatePlots(plotsData) {
+                // Your implementation to update plots based on the data
+                console.log("Updating plots with data:", plotsData);
+            }
+
+            // Example function to update metadata
+            function updateMetadata(metadata) {
+                // Your implementation to update metadata based on the data
+                console.log("Updating metadata with data:", metadata);
+            }
+
+        }).catch(error => {
+            console.error("Error loading JSON data:", error);
+        });
+    </script>
 </body>
 </html>
+
+
