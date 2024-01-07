@@ -20,7 +20,7 @@ function sunburstChart1() {var data = [{
 var layout = {
     margin: { l: 0, r: 0, b: 0, t: 0 },
     sunburstcolorway:["#636EFA","#EF553B","#00CC96"],
-    title: "Sunburst Chart of Species in Illinois"
+    title: "Species in Illinois"
 };
 Plotly.newPlot('myDiv', data, layout);}
 function init(){sunburstChart1();}
