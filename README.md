@@ -18,6 +18,8 @@ Environmental Conservation Online System: https://ecos.fws.gov/ecp/report/specie
 
 [Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)
 
+[Ethical Considerations]()
+
 [Conclusion/Future Considerations](https://github.com/StuartMBrown/proj3-repo#6-conclusion)
 
 ## Important Definitions 
@@ -30,6 +32,7 @@ Environmental Conservation Online System: https://ecos.fws.gov/ecp/report/specie
 We extracted CSV files from the US Fish and Wildlife Services Website. After obtaining the raw data, we organized it within a PostgreSQL database. The PostgreSQL structure facilitated efficient data retrieval. To ensure data integrity, we utilized Python scripts for cleaning, addressing inconsistencies and missing values. This streamlined process of web scraping, PostgreSQL database management, and Python-based data cleaning established a reliable dataset for our analytical pursuits.
 
 <img width="1307" alt="Screenshot 2024-01-06 at 8 25 27 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/3699a72a-09f6-47cd-8468-acd15c5ad005">
+<img width="1202" alt="Screenshot 2024-01-07 at 4 37 04 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/c3505f31-a96e-4cc8-af85-abc6013256ff">
 
 ## 3. Map View 
 
@@ -39,7 +42,8 @@ We extracted CSV files from the US Fish and Wildlife Services Website. After obt
 
 ## 6. Conclusion/Future Considerations 
 
-
+## 7. Ethical Considerations
+In our project focusing on endangered and threatened species in the Great Lakes states, ethical considerations played a pivotal role in every stage of the process. Transparency was maintained by clearly stating the sources of our data and methodologies, allowing for scrutiny and validation. We also made efforts to avoid perpetuating bias by ensuring diverse representation of species and worked to minimize unintentional misinformation. Prior to collecting data, we conducted thorough research to ensure that the websites from which we scraped information permitted such data extraction, adhering to ethical practices. Additionally, we meticulously reviewed and complied with relevant legal frameworks and terms of service to guarantee that the data we acquired could be used responsibly and lawfully. This approach not only ensured the integrity of our project but also underscored our commitment to ethical data handling and respect for the rights and regulations governing the information we accessed. Lastly, we committed to sharing our findings responsibly, emphasizing the importance of using the information to foster conservation efforts and raise awareness without causing harm to the species or their habitats.
 
 
 
