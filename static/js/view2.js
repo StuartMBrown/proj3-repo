@@ -1,31 +1,23 @@
-d3.json('/view2/output.json').then(data => {
+d3.json('/static/data/output.json').then(data => {
     if (!data) {
         console.error("Error loading data");
         return;
     }
 
     var speciesImageElement = d3.select("#speciesImage");
-    var pieChart; // Assuming you have a variable to store the pie chart
+    var pieChart;
 
-    // Add the JSON data to dropdown menu.
     var menu = d3.select("#selDataset");
     data.forEach(sample => {
-        menu.append("option").text(sample).property("value", sample);
+        menu.append("option").text(sample.name).property("value", sample.name);
     });
 
-    // Initial update for all plots and metadata
-    updatePlotsAndMetadata(data[0].name);
-    updateDescription(data[0].description);
-    updatePieChart(data[0]);  
-    updateSpeciesImage(data[0].image_url);
-
-    // Update all plots and metadata when you change the dropdown selection.
     menu.on("change", function () {
-        var thisSample = this.value;
-        var selectedSample = data.find(sample => sample.name === thisSample);
+        var selectedName = this.value;
+        var selectedSample = data.find(sample => sample.name === selectedName);
 
         if (selectedSample) {
-            updatePlotsAndMetadata(selectedSample.name);
+            updatePlotsAndMetadata(selectedSample);
             updateDescription(selectedSample.description);
             updatePieChart(selectedSample);
             updateSpeciesImage(selectedSample.image_url);
@@ -34,18 +26,21 @@ d3.json('/view2/output.json').then(data => {
         }
     });
 
+    // Initial update for the first item in the dropdown
+    updatePlotsAndMetadata(data[0]);
+    updateDescription(data[0].description);
+    updatePieChart(data[0]);
+    updateSpeciesImage(data[0].image_url);
+
     function updateDescription(description) {
         var descriptionElement = d3.select("#description");
         descriptionElement.text(description);
     }
 
-    // Function to update the species image
     function updateSpeciesImage(imageUrl) {
-        // Update the src attribute of the image element
         speciesImageElement.attr("src", imageUrl);
     }
 
-    // Function to update the pie chart based on the selected sample
     function updatePieChart(sample) {
         var pieData = [{
             values: [117, 81, 13],
@@ -58,12 +53,28 @@ d3.json('/view2/output.json').then(data => {
             width: 500
         };
 
-        // If the pie chart has been initialized, use Plotly.react to update it
         if (pieChart) {
             Plotly.react('myDiv', pieData, layout);
         } else {
-            // If it hasn't been initialized, use Plotly.newPlot
             pieChart = Plotly.newPlot('myDiv', pieData, layout);
         }
     }
+
+    function updatePlotsAndMetadata(selectedSample) {
+        updatePlots(selectedSample);
+        updateMetadata(selectedSample);
+    }
+
+    function updatePlots(selectedSample) {
+        // Your implementation to update plots based on the data
+        console.log("Updating plots with data:", selectedSample);
+    }
+
+    function updateMetadata(selectedSample) {
+        // Your implementation to update metadata based on the data
+        console.log("Updating metadata with data:", selectedSample);
+    }
+
+}).catch(error => {
+    console.error("Error loading JSON data:", error);
 });
