@@ -18,9 +18,9 @@ Environmental Conservation Online System: https://ecos.fws.gov/ecp/report/specie
 
 [Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)
 
-[Ethical Considerations]()
-
 [Conclusion/Future Considerations](https://github.com/StuartMBrown/proj3-repo#6-conclusion)
+
+[Ethical Considerations](https://github.com/StuartMBrown/proj3-repo/tree/main#7-ethical-considerations)
 
 ## Important Definitions 
 * A "non-essential species" based of the best available information,is the experimental population not essential for the continued existence of the species.
