@@ -8,16 +8,41 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Include Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <!-- Add the style tag for CSS -->
+    <style>
+        body {
+            background-color: darkseagreen;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #speciesImage, #myDiv {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px; /* Adjust this value for the desired space between elements */
+        }
+
+        #myDiv {
+            text-align: center; /* Center the content within the div */
+        }
+    </style>
 </head>
-<body style="background-color: darkseagreen;">
+<body>
     <h1>Species Dashboard</h1>
     <p>Below you will find the species dropdown menu, an image of the species, the ratio of endangered, threatened, and experimental/other species.</p>
     <!-- HTML content goes here -->
     <select id="selDataset"></select>
     <div id="description"></div>
-    <img id="speciesImage" alt="Species Image" style="max-width: 100%;" />
+    <img id="speciesImage" alt="Species Image" />
     <div id="myDiv"></div>
     <!-- Include external JavaScript file -->
     <script src="../static/js/view2.js"></script>
 </body>
 </html>
+
+
