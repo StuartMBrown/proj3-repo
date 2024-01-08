@@ -2,7 +2,7 @@ function sunburstChart1() {var data = [{
     type: "sunburst",
     labels: [
         "Illinois",
-        "Endangered", "Indiana bat", "Gray bat", "Piping Plover", "Pallid sturgeon", "Higgins eye", "Pink mucket", "Orangefoot pimpleback", "Fat pocketbook", "Scaleshell mussel", "Clubshell", "Fanshell", "Northern riffleshell", "Iowa Pleistocene snail", "Karner blue butterfly", "Hine's emerald dragonfly", "Leafy prairie-clover", "Spectaclecase", "C", "Sheepnose Mussel", "Northern Long-Eared Bat", "Rusty patched bumble bee",
+        "Endangered", "Indiana bat", "Gray bat", "Piping Plover", "Pallid sturgeon", "Higgins eye", "Pink mucket", "Orangefoot pimpleback", "Fat pocketbook", "Scaleshell mussel", "Clubshell", "Fanshell", "Northern riffleshell", "Iowa Pleistocene snail", "Karner blue butterfly", "Hine's emerald dragonfly", "Leafy prairie-clover", "Spectaclecase", "Snuffbox mussel", "Sheepnose Mussel", "Northern Long-Eared Bat", "Rusty patched bumble bee",
         "Threatened", "Mead's milkweed", "Decurrent false aster", "Pitcher's thistle", "Prairie bush-clover", "Eastern prairie fringed orchid", "Lakeside daisy", "Rabbitsfoot", "Eastern Massasauga", "rufa red knot", "Longsolid"
         
        
