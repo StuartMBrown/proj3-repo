@@ -12,7 +12,7 @@ Environmental Conservation Online System: https://ecos.fws.gov/ecp/report/specie
 
 [Pull and Clean Data](https://github.com/StuartMBrown/proj3-repo#1-pull-and-clean-data)
 
-[Cover Page]()
+[Cover Page](https://github.com/StuartMBrown/proj3-repo/blob/main/README.md#2-cover-page)
 
 [Map View](https://github.com/StuartMBrown/proj3-repo#map-view)
 
