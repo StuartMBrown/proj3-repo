@@ -38,7 +38,7 @@ d3.json(geoData).then(function (data) {
       style: {
           color: '#fff',
           weight: 2,
-          fillOpacity: 0.8
+          fillOpacity: 0.5
       },
       // Binding a popup to each layer
       onEachFeature: function (feature, layer) {
@@ -55,7 +55,7 @@ d3.json(geoData).then(function (data) {
       let labels = [];
   
       for (let i = 0; i < bins.length; i++) {
-          let legendInfo = '<i style="background:' + colorScale(bins[i]) + 
+          let legendInfo = '<i style="background:' + getColor(bins[i]) + 
               '"></i> ' +
               bins[i] + (bins[i + 1] ? '&ndash;' + bins[i + 1] + '<br>' : '+');
   
@@ -80,7 +80,7 @@ d3.json(geoData).then(function (data) {
       style: {
           color: '#fff',
           weight: 2,
-          fillOpacity: 0.8
+          fillOpacity: 0.5
       },
       // Binding a popup to each layer
       onEachFeature: function (feature, layer) {
@@ -121,7 +121,7 @@ d3.json(geoData).then(function (data) {
       style: {
           color: '#fff',
           weight: 2,
-          fillOpacity: 0.8
+          fillOpacity: 0.5
       },
 
       // Binding a popup to each layer

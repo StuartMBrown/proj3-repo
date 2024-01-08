@@ -49,7 +49,7 @@ def view3():
 
 @app.route("/api/v1.0/boundaries")
 def boundary():
-    with open("./static/data/stats.json") as file:
+    with open("static/data/stats.json") as file:
         json_decoded = json.load(file)
 
     return json_decoded
