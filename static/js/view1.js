@@ -16,51 +16,54 @@ d3.json(geoData).then(function (data) {
 
   // Function to get color based on depth
   let colorScale = d3.scaleLinear()
-  .domain([0, 5, 10, 15, 20, 25])
-  .range(['#fee5d9', '#fcae91', '#fb6a4a', '#de2d26', '#a50f15']);
-
+    .domain([0, 5, 10, 15, 20, 25])
+    .range(
+      ['#E9CCEE', '#E1AADD', '#D488C0', '#C6669A', '#B8446D', '#A92239']
+    );
 
   function getColor(value) {
     return colorScale(value);
   }
 
-  // function getColor(value) {
-  //   return value === null ? '#FFFFFF' : colorScale(value);
-  // }
-
-
-  // Create a GeoJSON layer for threatened species
-  let threatenedLayer = L.geoJson(data, {
-    style: {
-      color: "#fff",
-      weight: 2,
-      fillOpacity: 0.8,
-      fillColor: function (d) {
-          return getColor(d.properties.THREATENED); // Replace THREATENED with the corresponding property for each layer
+  // Create a new choropleth layer.
+  let threatened = L.choropleth(data, {
+      // Define which property in the features to use.
+      valueProperty: "THREATENED",
+      // Set the color scale.
+      scale: ['#E9CCEE', '#E1AADD', '#D488C0', '#C6669A', '#B8446D', '#A92239'],
+      // The number of breaks in the step range
+      steps: 5,
+      // q for quartile, e for equidistant, k for k-means
+      mode: "q",
+      style: {
+          color: '#fff',
+          weight: 2,
+          fillOpacity: 0.8
+      },
+      // Binding a popup to each layer
+      onEachFeature: function (feature, layer) {
+          // Bind popup with the species count
+          layer.bindPopup("<strong>" + feature.properties.ABBR + "</strong><br /><br />Total number of species in this category: " + feature.properties.THREATENED);
       }
-    },
-    onEachFeature: function (feature, layer) {
-        layer.bindPopup("<strong>" + feature.properties.ABBR + "</strong><br /><br />Total number of species in this category: " + feature.properties.THREATENED);
-    }
   });
 
   // Set up the legend for the 'threatened' layer.
   let threatenedLegend = L.control({ position: "bottomright" });
   threatenedLegend.onAdd = function () {
-    let div = L.DomUtil.create("div", "info legend");
-    let bins = [0, 5, 10, 15, 20, 25];
-    let labels = [];
-
-    for (let i = 0; i < bins.length; i++) {
-        let legendInfo = '<i style="background:' + getColor(parseFloat(bins[i])) +
-            '"></i> ' +
-            bins[i] + (bins[i + 1] ? '&ndash;' + bins[i + 1] + '<br>' : '+');
-
-        labels.push(legendInfo);
-    }
-
-    div.innerHTML = labels.join("");
-    return div;
+      let div = L.DomUtil.create("div", "info legend");
+      let bins = [0, 5, 10, 15, 20, 25];
+      let labels = [];
+  
+      for (let i = 0; i < bins.length; i++) {
+          let legendInfo = '<i style="background:' + getColor(bins[i]) + 
+              '"></i> ' +
+              bins[i] + (bins[i + 1] ? '&ndash;' + bins[i + 1] + '<br>' : '+');
+  
+          labels.push(legendInfo);
+      }
+  
+      div.innerHTML = labels.join("");
+      return div;
   };
   
 
@@ -155,7 +158,7 @@ d3.json(geoData).then(function (data) {
   };
 
   let overlayMaps = {
-      "Threatened": threatenedLayer,
+      "Threatened": threatened,
       "Endangered": endangered,
       "Nonessential": nonessential
   };
@@ -164,7 +167,7 @@ d3.json(geoData).then(function (data) {
   L.control.layers(baseMaps, overlayMaps, { position: 'topright' }).addTo(myMap);
 
   // Adding the 'threatened' layer to the map
-  threatenedLayer.addTo(myMap);
+  threatened.addTo(myMap);
 
   // Adding the 'threatened' legend to the map
   threatenedLegend.addTo(myMap);
@@ -203,7 +206,7 @@ d3.json(geoData).then(function (data) {
   });
 
   // Removing the layers from the map to keep them turned off by default
-  myMap.removeLayer(threatenedLayer);
+  myMap.removeLayer(threatened);
   myMap.removeLayer(endangered);
   myMap.removeLayer(nonessential);
 
