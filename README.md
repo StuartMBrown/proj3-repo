@@ -12,6 +12,8 @@ Environmental Conservation Online System: https://ecos.fws.gov/ecp/report/specie
 
 [Pull and Clean Data](https://github.com/StuartMBrown/proj3-repo#1-pull-and-clean-data)
 
+[Cover Page]()
+
 [Map View](https://github.com/StuartMBrown/proj3-repo#map-view)
 
 [Dashboard of Species](https://github.com/StuartMBrown/proj3-repo#dashboard-of-species)
@@ -34,9 +36,13 @@ We extracted CSV files from the US Fish and Wildlife Services Website. After obt
 <img width="1307" alt="Screenshot 2024-01-06 at 8 25 27 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/3699a72a-09f6-47cd-8468-acd15c5ad005">
 <img width="1202" alt="Screenshot 2024-01-07 at 4 37 04 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/c3505f31-a96e-4cc8-af85-abc6013256ff">
 
+## 2. Cover Page
+<img width="1470" alt="Screenshot 2024-01-07 at 6 18 44 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/e99c9d82-2a71-4870-a9b0-14bce2e9c32e">
+
 ## 3. Map View 
 
 ## 4. Dashboard of Species
+<img width="1470" alt="Screenshot 2024-01-07 at 6 15 53 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/b00e1877-54a6-4227-ac18-a9412fcafdbe">
 
 ## 5. Sun Burst
 <img width="1445" alt="Screenshot 2024-01-07 at 4 49 40 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/d0182567-fc04-4cb9-bab4-80d802d99d03">
