@@ -37,7 +37,7 @@ We extracted CSV files from the US Fish and Wildlife Services Website. After obt
 <img width="1202" alt="Screenshot 2024-01-07 at 4 37 04 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/c3505f31-a96e-4cc8-af85-abc6013256ff">
 
 ## 2. Cover Page
-<img width="1470" alt="Screenshot 2024-01-07 at 6 18 44 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/e99c9d82-2a71-4870-a9b0-14bce2e9c32e">
+<img width="1470" alt="Screenshot 2024-01-07 at 6 21 35 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/69900664-ce29-4314-979c-37f503d0be01">
 
 ## 3. Map View 
 
