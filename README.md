@@ -1,56 +1,56 @@
 ## Project overview - Visualization Track 
-Dataset:(https://ecos.fws.gov/ecp/report/species-listings-by-state-totals?statusCategory=Listed)
-
 The Great Lakes Endangered Species Project focuses on raising awareness about the species in the Great Lakes region, specifically in states such as Minnesota, Wisconsin, Illinois, Indiana, Ohio, Michigan, Pennsylvania, and New York. The project employs three main views to convey crucial information. View #1 presents a location chart showcasing the distribution of threatened, endangered, and nonessential species, using different layers to distinguish each category. View #2 offers a dynamic dashboard with dropdown options for selecting a specific state and species (including common names). This view includes a pop-up gauge plot displaying the levels of threatened, endangered, and nonessential species, along with additional information such as the listing location, images, and brief descriptions of the animals. View #3 serves as a comprehensive summary of species distribution in the Great Lakes region. By providing a comprehensive visual representation and interactive features, the project aims to shed light on the current status of these animals and promote awareness for their conservation in the Great Lakes region.
 
-Definitions 
-Non-essential: on the basis of the best available information, the experimental population is not essential for the continued existence of the species.
-A “threatened species” is one that is likely to become endangered in the foreseeable future throughout all or a significant portion of its range.
-An “endangered species” is one that is in danger of extinction throughout all or a significant portion of its range.
-An experimental population is a population of an endangered or threatened species that is released into the wild outside of the current range of the species with the aim of contributing to the conservation of the species.
+Technologies used: Python, HTML, Javascript, PostgresSQL, CSS, Jupyter Notebooks and various Python libraries 
 
-## Details for Team to Refer to (will be deleted later):
-Focus on the great lakes endangered species: Minnesota, Wisconsin, Illinois, Indiana, Ohio, Michigan, Pennsylvania (Region 1) and New York (Region 1)
+Contributors: Jian Qiang Liu, Kelsey Sniatynsky, Maryam Shaaban, Sania Sufi, Stuart Brown, Valeria Briones
 
-View #1 - Maryam, Jian, Stuart
-Location chart of all the threatened, endangered species, nonesstential
-Leaflet map - brings up page with summary (Erin will help with GEOJSON - edit out all states not in project)
+Environmental Conservation Online System: https://ecos.fws.gov/ecp/report/species-listings-by-state-totals?statusCategory=Listed
 
-Chloropleth map for each layer - scale is total # of species for each category
-- layer # of threated 
-- layer # of endangered
-- layer # of nonesstential
+## Table of Contents
+[Important Definitions](https://github.com/StuartMBrown/proj3-repo#important-definitions)
 
-View #2 - Sania and Kelsey 
-Dashboard (web scrap - create for loop)
-- drop down for state
-- drop down for species (include common name) 
-- pop-up GAUGE PLOT with threatened, endangered, nonesstential
-- box pop up with "where listed"
-- image
-- blurb about animal 
+[Pull and Clean Data](https://github.com/StuartMBrown/proj3-repo#1-pull-and-clean-data)
 
-View #3 - Val 
-- Sunchart 
+[Cover Page](https://github.com/StuartMBrown/proj3-repo/blob/main/README.md#2-cover-page)
 
-## Project Plan Idea (will be deleted later)
-- [x] Find data (contains 100+) 
-- [x] create one-page proposal (12/18) 
-- [x] discuss our charts and evaluate data if it will allow for those charts (12/18) 
-- [x] sketch webpage and determine how parts are related (12/18)
-- [x] A database is used to house data (SQL, MongoDB, SQLite, etc.) - (12/19)
-- [x] Merge CSVs and turn into JSON (12/21)
-- [x] Create FLASK application (12/21)
-- [x] clean data and then put it into database (12/19)
-- [ ] write queries that will pull data from the db that matches what is needed for the plot and create routes to send data to javascript (12/19)
-- [ ] Plot #1 (12/21) - Location plot 
-- [ ] Plot #2 (12/21) - Dashboard 
-- [ ] Plot #3 (12/21) - Summary 
-  - [ ] pop up with top 3 depending on layer (scrap if too messy)
-- [ ] Visualisations created from user-selected filtered data (12/21) 
-- [ ] A Python or JavaScript library not shown in class is used in the project (1/2)
-- [ ] create a webpage that will hold graphics and create a flask route that renders/loads the webpage (1/2)
-- [ ] webpage created to showcase data visualisations runs without error (1/2)
-- [ ] replace javascript data files with api routes that transfer data (1/4)
-- [ ] add content to presentation (1/4)
-- [ ] update readme (Instructions on how to use and interact with the project, paragraph summarising efforts for ethical considerations made in the project, references) - (1/4)
+[Map View](https://github.com/StuartMBrown/proj3-repo#map-view)
+
+[Dashboard of Species](https://github.com/StuartMBrown/proj3-repo#dashboard-of-species)
+
+[Sun Burst](https://github.com/StuartMBrown/proj3-repo#sun-burst)
+
+[Conclusion/Future Considerations](https://github.com/StuartMBrown/proj3-repo#6-conclusion)
+
+[Ethical Considerations](https://github.com/StuartMBrown/proj3-repo/tree/main#7-ethical-considerations)
+
+## Important Definitions 
+* A "non-essential species" based of the best available information,is the experimental population not essential for the continued existence of the species.
+* A “threatened species” is one that is likely to become endangered in the foreseeable future throughout all or a significant portion of its range.
+* An “endangered species” is one that is in danger of extinction throughout all or a significant portion of its range.
+* An experimental population is a population of an endangered or threatened species that is released into the wild outside of the current range of the species with the aim of contributing to the conservation of the species.
+
+## 1. Pull and Clean Data 
+We extracted CSV files from the US Fish and Wildlife Services Website. After obtaining the raw data, we organized it within a PostgreSQL database. The PostgreSQL structure facilitated efficient data retrieval. To ensure data integrity, we utilized Python scripts for cleaning, addressing inconsistencies and missing values. This streamlined process of web scraping, PostgreSQL database management, and Python-based data cleaning established a reliable dataset for our analytical pursuits.
+
+<img width="1307" alt="Screenshot 2024-01-06 at 8 25 27 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/3699a72a-09f6-47cd-8468-acd15c5ad005">
+<img width="1202" alt="Screenshot 2024-01-07 at 4 37 04 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/c3505f31-a96e-4cc8-af85-abc6013256ff">
+
+## 2. Cover Page
+<img width="1470" alt="Screenshot 2024-01-07 at 6 18 44 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/73ad8d42-bb5d-4523-8256-d165ae2ab182">
+
+## 3. Map View 
+
+## 4. Dashboard of Species
+<img width="1470" alt="Screenshot 2024-01-07 at 6 21 35 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/69900664-ce29-4314-979c-37f503d0be01">
+
+## 5. Sun Burst
+<img width="1445" alt="Screenshot 2024-01-07 at 4 49 40 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/d0182567-fc04-4cb9-bab4-80d802d99d03">
+
+## 6. Conclusion/Future Considerations 
+
+## 7. Ethical Considerations
+In our project focusing on endangered and threatened species in the Great Lakes states, ethical considerations played a pivotal role in every stage of the process. Transparency was maintained by clearly stating the sources of our data and methodologies, allowing for scrutiny and validation. We also made efforts to avoid perpetuating bias by ensuring diverse representation of species and worked to minimize unintentional misinformation. Prior to collecting data, we conducted thorough research to ensure that the websites from which we scraped information permitted such data extraction, adhering to ethical practices. Additionally, we meticulously reviewed and complied with relevant legal frameworks and terms of service to guarantee that the data we acquired could be used responsibly and lawfully. This approach not only ensured the integrity of our project but also underscored our commitment to ethical data handling and respect for the rights and regulations governing the information we accessed. Lastly, we committed to sharing our findings responsibly, emphasizing the importance of using the information to foster conservation efforts and raise awareness without causing harm to the species or their habitats.
+
+
+

@@ -4,33 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Species Dashboard</title>
-    <link rel="stylesheet" href="./static/css/view2.css">
+    <!-- Include D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <!-- Add the style tag for CSS -->
+    <style>
+        body {
+            background-color: darkseagreen;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #speciesImage, #myDiv {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px; /* Adjust this value for the desired space between elements */
+        }
+
+        #myDiv {
+            text-align: center; /* Center the content within the div */
+        }
+    </style>
 </head>
 <body>
-    <div class="col-md-12 jumbotron text-center">
-        <h1>Endangered Species Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
-      </div>
-
-    <div id="dashboard">
-        <label for="stateDropdown">Select State:</label>
-        <select id="stateDropdown"></select>
-
-        <label for="speciesDropdown">Select Species:</label>
-        <select id="speciesDropdown"></select>
-
-        <button onclick="fetchData()">Fetch Data</button>
-
-        <div id="gaugePlot"></div>
-
-        <div id="whereListed"></div>
-
-        <img id="animalImage" src="" alt="Animal Image">
-
-        <div id="animalBlurb"></div>
-    </div>
-
-    <script src="./static/js/view2.js"></script>
+    <h1>Species Dashboard</h1>
+    <p>Below you will find the species dropdown menu, an image of the species, the ratio of endangered, threatened, and experimental/other species.</p>
+    <!-- HTML content goes here -->
+    <select id="selDataset"></select>
+    <div id="description"></div>
+    <img id="speciesImage" alt="Species Image" />
+    <div id="myDiv"></div>
+    <!-- Include external JavaScript file -->
+    <script src="../static/js/view2.js"></script>
 </body>
 </html>
 
