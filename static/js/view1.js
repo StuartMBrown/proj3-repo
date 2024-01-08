@@ -55,7 +55,7 @@ d3.json(geoData).then(function (data) {
       let labels = [];
   
       for (let i = 0; i < bins.length; i++) {
-          let legendInfo = '<i style="background:' + getColor(bins[i]) + 
+          let legendInfo = '<i style="background:' + colorScale(bins[i]) + 
               '"></i> ' +
               bins[i] + (bins[i + 1] ? '&ndash;' + bins[i + 1] + '<br>' : '+');
   
