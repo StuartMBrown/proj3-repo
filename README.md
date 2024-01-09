@@ -40,7 +40,7 @@ We extracted CSV files from the US Fish and Wildlife Services Website. After obt
 <img width="1470" alt="Screenshot 2024-01-07 at 6 18 44 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/73ad8d42-bb5d-4523-8256-d165ae2ab182">
 
 ## 3. Map View 
-<img width="1470" alt="Screenshot 2024-01-08 at 7.03.19 PM" src="/Users/mshaaban/Desktop/Screenshot 2024-01-08 at 7.03.19 PM.png">
+<img width="821" alt="Screenshot 2024-01-08 at 7 03 19 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/140746292/00cd998c-7826-4f5a-8742-7531ab3047e4">
 
 ## 4. Dashboard of Species
 <img width="1470" alt="Screenshot 2024-01-07 at 6 21 35 PM" src="https://github.com/StuartMBrown/proj3-repo/assets/139585143/69900664-ce29-4314-979c-37f503d0be01">
